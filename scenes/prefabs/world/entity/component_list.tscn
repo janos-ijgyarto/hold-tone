@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsqpy0vjtd22k"]
+
+[ext_resource type="Script" path="res://scripts/world/entity/component_list.gd" id="1_w737m"]
+
+[node name="Components" type="Node"]
+script = ExtResource("1_w737m")

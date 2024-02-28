@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://dojhemc04uc7f"]
+
+[ext_resource type="PackedScene" uid="uid://be5xtesxxhhcs" path="res://scenes/prefabs/world/level.tscn" id="1_6uq2a"]
+[ext_resource type="PackedScene" uid="uid://i6ihi5yhp2ds" path="res://scenes/prefabs/world/entity/player/player.tscn" id="2_i7yse"]
+[ext_resource type="PackedScene" uid="uid://bm3t6ve36ysk1" path="res://scenes/prefabs/world/entity/npc/npc.tscn" id="3_7ugpr"]
+
+[sub_resource type="Gradient" id="Gradient_rip2s"]
+colors = PackedColorArray(0, 1, 1, 1, 0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l2bsg"]
+gradient = SubResource("Gradient_rip2s")
+fill_from = Vector2(0, 1)
+
+[node name="Level" instance=ExtResource("1_6uq2a")]
+_player_prefab = ExtResource("2_i7yse")
+_enemy_prefab = ExtResource("3_7ugpr")
+
+[node name="Terrain" parent="." index="0"]
+texture = SubResource("GradientTexture2D_l2bsg")
